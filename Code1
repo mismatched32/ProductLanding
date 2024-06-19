@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Landing Page</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        #header {
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+        #header-img {
+            max-height: 50px;
+        }
+        #nav-bar {
+            display: flex;
+        }
+        .nav-link {
+            color: white;
+            padding: 10px 15px;
+            text-decoration: none;
+        }
+        .nav-link:hover {
+            background-color: #575757;
+        }
+        #main {
+            padding: 80px 20px 20px 20px; /* Added padding-top to ensure content is not hidden behind the fixed header */
+        }
+        #video {
+            width: 100%;
+            max-width: 600px;
+            height: 315px;
+        }
+        #form {
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+            max-width: 400px;
+        }
+        #email {
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        #submit {
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            background-color: #28a745;
+            color: white;
+            cursor: pointer;
+        }
+        #submit:hover {
+            background-color: #218838;
+        }
+        @media (max-width: 768px) {
+            #header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            #nav-bar {
+                flex-direction: column;
+                width: 100%;
+            }
+            .nav-link {
+                text-align: center;
+                padding: 10px;
+                border-top: 1px solid #444;
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header id="header">
+    <img id="header-img" src="https://via.placeholder.com/150" alt="Logo">
+    <nav id="nav-bar">
+        <a class="nav-link" href="#about">About</a>
+        <a class="nav-link" href="#features">Features</a>
+        <a class="nav-link" href="#contact">Contact</a>
+    </nav>
+</header>
+
+<main id="main">
+    <section id="about">
+        <h2>About Our Product</h2>
+        <p>Learn about our amazing product and how it can benefit you.</p>
+    </section>
+
+    <section id="features">
+        <h2>Features</h2>
+        <p>Explore the features that make our product stand out from the competition.</p>
+        <div>
+            <iframe id="video" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <form id="form" action="https://www.freecodecamp.com/email-submit">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            <input type="submit" id="submit" value="Submit">
+        </form>
+    </section>
+</main>
+
+</body>
+</html>
